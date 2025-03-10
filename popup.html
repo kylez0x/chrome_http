@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>全局HTTP认证代理</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 3px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #3367d6;
+    }
+    .status {
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: #f1f1f1;
+    }
+    .separator {
+      border-top: 1px solid #ddd;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>全局HTTP认证代理</h2>
+  
+  <div class="status" id="proxy-status">代理状态: 未启用</div>
+  
+  <div class="form-group">
+    <label for="proxy-host">代理服务器地址:</label>
+    <input type="text" id="proxy-host" placeholder="例如: proxy.example.com">
+  </div>
+  
+  <div class="form-group">
+    <label for="proxy-port">端口:</label>
+    <input type="number" id="proxy-port" placeholder="例如: 8080">
+  </div>
+  
+  <div class="form-group">
+    <label for="proxy-username">用户名:</label>
+    <input type="text" id="proxy-username" placeholder="代理认证用户名">
+  </div>
+  
+  <div class="form-group">
+    <label for="proxy-password">密码:</label>
+    <input type="password" id="proxy-password" placeholder="代理认证密码">
+  </div>
+  
+  <button id="save-config">保存配置</button>
+  
+  <div class="separator"></div>
+  
+  <button id="toggle-proxy">启用代理</button>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
